@@ -1,0 +1,12 @@
+<ion-card line="none">
+  <ion-card-content line="none">
+    <ion-select  (ionChange)="manejarSeleccionFiguraGeometrica($event)" placeholder="Escoja una figura geometrica">
+      <div slot="label">Figura Geometrica</div>
+      <ion-select-option value="circulo">circulo</ion-select-option>
+      <ion-select-option value="triangulo">triangulo</ion-select-option>
+    </ion-select>
+
+    <app-circulo *ngIf="esCirculo()"></app-circulo>
+    <app-triangulo *ngIf="esTriangulo()"></app-triangulo>
+  </ion-card-content>
+</ion-card>
